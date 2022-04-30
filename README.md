@@ -1,6 +1,6 @@
 <h1> CRACHÁ PRESENÇA NEXT LEVEL WEEK - ROCKETSEAT </h1>
 <h3>Card desenvolvido a partir de uma mentória, disponibilizada pela RocketSeat.</h3>
-<h4>Principal Caracerística:</h4>
+<h4>Principais Caracerísticas:</h4>
 <ul>
  <li>Integração com a API do GitHub
  <li>Responsividade em layouts mobile e desktop
