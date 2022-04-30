@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+}
+
+html,body{
+
+    --gray: hsl(240, 9%, 89%);
+    --black: hsl(240, 6%, 13%);
+    --pink: #FF3D6E;
+    --yellow: #FFC323;
+
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #09090a;
+}
+
+.p__relative{
+    position: relative; 
+}
+
+.p__absolute{
+    position: absolute;
+}
+
+.rectangle__ticket{
+    width: 4rem;
+    height: 9.8rem;
+    background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%); 
+    
+    top: -135px;
+    left: 148px;
+
+    margin: 0;
+    padding: 0; 
+
+    z-index: 2;
+} 
+
+.rectangle__separator{
+    width: 80px;
+    height: 8px;
+
+    background: #09090a;
+
+    top: 20px;
+    left: 140px;
+
+    z-index: 1;
+}
+
+.circle__pink{
+    width: 1118px;
+    height: 1118px;
+
+    top: -900px;
+    right: -100px;
+
+
+    background: radial-gradient(50% 50% at 50% 50%, var(--pink) 0%, rgba(18, 18, 20, 0) 100%);
+} 
+
+.circle__yellow{
+    width: 1118px;
+    height: 1118px;
+
+    top: -900px;
+    left: -100px;
+
+    background: radial-gradient(50% 50% at 50% 50%, var(--yellow) 0%, rgba(18, 18, 20, 0) 100%);
+} 
+
+
+main{
+    background: url(/images/background-ticket-desktop.png); 
+    width: 358px;
+    height: 524px;
+
+    color: var(--gray);
+
+    top: 140px;
+
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto; 
+    text-align: center;  
+}
+
+.avatar{
+    width: 10rem;
+    margin: 4.5rem auto 0;
+}
+
+.avatar span{ 
+    top: -15px;  
+
+    z-index: 1;
+}
+
+.avatar > img{
+    width: 10rem;
+    height: 11.5rem;
+
+    object-fit: cover;
+
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    margin-top: 1.5rem;
+}
+
+a{
+    color: var(--gray);
+    text-decoration: none;
+
+    margin-top: .25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: .75rem;
+}
+
+p{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+ul{
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+
+    gap: .5rem;
+
+    list-style: none;
+    
+    padding: 0;
+}
+
+@media (max-width: 500px) {
+
+    body{
+        background-color: var(--black);
+    }
+
+    .rectangle__separator, 
+    .rectangle__ticket{
+        display: none;
+    } 
+    
+    main{
+        background: url(/images/background-ticket-mobile.png); 
+
+        width: 375px;
+        height: 700px;
+
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.171);
+        top: 12%;
+    }
+
+    .avatar{
+        margin: 11.5rem auto 0;
+    }
+
+    ul{
+        margin-top: 4rem;
+    }
+}
